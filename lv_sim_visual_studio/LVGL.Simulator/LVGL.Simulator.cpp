@@ -65,21 +65,21 @@ int main()
     //lv_freetype_init(64, 1, 0);
 
     ///*Create a font*/
-    //static lv_ft_info_t info;
-    //info.name = "./lvgl/src/extra/libs/freetype/arial.ttf";
-    //info.weight = 36;
-    //info.style = FT_FONT_STYLE_NORMAL;
-    //lv_ft_font_init(&info);
+    static lv_ft_info_t info;
+    info.name = "./lvgl/src/extra/libs/freetype/arial.ttf";
+    info.weight = 36;
+    info.style = FT_FONT_STYLE_NORMAL;
+    lv_ft_font_init(&info);
 
     ///*Create style with the new font*/
-    //static lv_style_t style;
-    //lv_style_init(&style);
-    //lv_style_set_text_font(&style, info.font);
+    static lv_style_t style;
+    lv_style_init(&style);
+    lv_style_set_text_font(&style, info.font);
 
     ///*Create a label with the new style*/
-    //lv_obj_t* label = lv_label_create(lv_scr_act());
-    //lv_obj_add_style(label, &style, 0);
-    //lv_label_set_text(label, "FreeType Arial Test");
+    lv_obj_t* label = lv_label_create(lv_scr_act());
+    lv_obj_add_style(label, &style, 0);
+    lv_label_set_text(label, "اختبار اللغة العربية 123ABC اختبار ناجح!");
 
     // ----------------------------------
     // my Win32 filesystem driver application
@@ -209,7 +209,7 @@ int main()
 
     // lv_example_keyboard_1();    // ok
 
-     lv_example_label_1();
+     //lv_example_label_1();
     // lv_example_label_2();       // ok
 
     // lv_example_led_1();
